@@ -1,9 +1,10 @@
 <!DOCTYPE html>
+
 <html lang="de">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Termin-Wächter 🏥</title>
+<title>Termin-WÃ¤chter ðŸ¥</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -21,454 +22,492 @@
     --shadow: 0 1px 3px rgba(0,0,0,.07), 0 4px 16px rgba(0,0,0,.06);
   }
 
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  body {
-    background: var(--bg);
-    font-family: 'DM Sans', sans-serif;
-    color: var(--text);
-    min-height: 100vh;
-  }
+body {
+background: var(â€“bg);
+font-family: â€˜DM Sansâ€™, sans-serif;
+color: var(â€“text);
+min-height: 100vh;
+}
 
-  /* ── HEADER ── */
-  header {
-    background: var(--card);
-    border-bottom: 1px solid var(--border);
-    padding: 14px 24px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
-  header .logo {
-    font-family: 'DM Serif Display', serif;
-    font-size: 1.25rem;
-    color: var(--text);
-    letter-spacing: -.01em;
-  }
-  header .logo em { color: var(--accent); font-style: italic; }
-  header .pill {
-    background: var(--pill-bg);
-    color: var(--pill-text);
-    font-size: .72rem;
-    font-weight: 600;
-    padding: 3px 10px;
-    border-radius: 99px;
-    letter-spacing: .02em;
-    text-transform: uppercase;
-  }
+/* â”€â”€ HEADER â”€â”€ */
+header {
+background: var(â€“card);
+border-bottom: 1px solid var(â€“border);
+padding: 14px 24px;
+display: flex;
+align-items: center;
+gap: 12px;
+position: sticky;
+top: 0;
+z-index: 100;
+}
+header .logo {
+font-family: â€˜DM Serif Displayâ€™, serif;
+font-size: 1.25rem;
+color: var(â€“text);
+letter-spacing: -.01em;
+}
+header .logo em { color: var(â€“accent); font-style: italic; }
+header .pill {
+background: var(â€“pill-bg);
+color: var(â€“pill-text);
+font-size: .72rem;
+font-weight: 600;
+padding: 3px 10px;
+border-radius: 99px;
+letter-spacing: .02em;
+text-transform: uppercase;
+}
 
-  /* ── HERO ── */
-  .hero {
-    text-align: center;
-    padding: 56px 24px 40px;
-    max-width: 640px;
-    margin: 0 auto;
-  }
-  .hero h1 {
-    font-family: 'DM Serif Display', serif;
-    font-size: clamp(2rem, 5vw, 2.8rem);
-    line-height: 1.2;
-    letter-spacing: -.02em;
-  }
-  .hero h1 em { color: var(--accent); font-style: italic; }
-  .hero p {
-    color: var(--muted);
-    font-size: 1rem;
-    margin-top: 12px;
-    line-height: 1.6;
-  }
+/* â”€â”€ HERO â”€â”€ */
+.hero {
+text-align: center;
+padding: 56px 24px 40px;
+max-width: 640px;
+margin: 0 auto;
+}
+.hero h1 {
+font-family: â€˜DM Serif Displayâ€™, serif;
+font-size: clamp(2rem, 5vw, 2.8rem);
+line-height: 1.2;
+letter-spacing: -.02em;
+}
+.hero h1 em { color: var(â€“accent); font-style: italic; }
+.hero p {
+color: var(â€“muted);
+font-size: 1rem;
+margin-top: 12px;
+line-height: 1.6;
+}
 
-  /* ── TABS ── */
-  .tabs-wrapper {
-    max-width: 820px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-  .tabs {
-    display: flex;
-    gap: 6px;
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 6px;
-    box-shadow: var(--shadow);
-    overflow-x: auto;
-    scrollbar-width: none;
-    flex-wrap: wrap;
-  }
-  .tabs::-webkit-scrollbar { display: none; }
-  .tab-btn {
-    flex: 1;
-    min-width: 140px;
-    padding: 10px 14px;
-    border: none;
-    border-radius: 10px;
-    background: transparent;
-    cursor: pointer;
-    font-family: 'DM Sans', sans-serif;
-    font-size: .84rem;
-    font-weight: 500;
-    color: var(--muted);
-    display: flex;
-    align-items: center;
-    gap: 7px;
-    transition: all .18s ease;
-    white-space: nowrap;
-    justify-content: center;
-  }
-  .tab-btn:hover { color: var(--text); background: var(--bg); }
-  .tab-btn.active { color: white; font-weight: 600; }
-  .tab-btn[data-tab="doctolib"].active  { background: var(--accent); }
-  .tab-btn[data-tab="jameda"].active    { background: var(--accent3); }
-  .tab-btn[data-tab="116117"].active    { background: var(--accent2); }
-  .tab-btn[data-tab="kvtermin"].active  { background: var(--accent4); }
+/* â”€â”€ TABS â”€â”€ */
+.tabs-wrapper {
+max-width: 820px;
+margin: 0 auto;
+padding: 0 20px;
+}
+.tabs {
+display: flex;
+gap: 6px;
+background: var(â€“card);
+border: 1px solid var(â€“border);
+border-radius: 14px;
+padding: 6px;
+box-shadow: var(â€“shadow);
+overflow-x: auto;
+scrollbar-width: none;
+flex-wrap: wrap;
+}
+.tabs::-webkit-scrollbar { display: none; }
+.tab-btn {
+flex: 1;
+min-width: 140px;
+padding: 10px 14px;
+border: none;
+border-radius: 10px;
+background: transparent;
+cursor: pointer;
+font-family: â€˜DM Sansâ€™, sans-serif;
+font-size: .84rem;
+font-weight: 500;
+color: var(â€“muted);
+display: flex;
+align-items: center;
+gap: 7px;
+transition: all .18s ease;
+white-space: nowrap;
+justify-content: center;
+}
+.tab-btn:hover { color: var(â€“text); background: var(â€“bg); }
+.tab-btn.active { color: white; font-weight: 600; }
+.tab-btn[data-tab=â€œdoctolibâ€].active  { background: var(â€“accent); }
+.tab-btn[data-tab=â€œjamedaâ€].active    { background: var(â€“accent3); }
+.tab-btn[data-tab=â€œ116117â€].active    { background: var(â€“accent2); }
+.tab-btn[data-tab=â€œkvterminâ€].active  { background: var(â€“accent4); }
 
-  /* ── PANEL ── */
-  .panel-wrapper {
-    max-width: 820px;
-    margin: 20px auto 40px;
-    padding: 0 20px;
-  }
-  .panel {
-    display: none;
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: var(--shadow);
-  }
-  .panel.active { display: block; }
+/* â”€â”€ PANEL â”€â”€ */
+.panel-wrapper {
+max-width: 820px;
+margin: 20px auto 40px;
+padding: 0 20px;
+}
+.panel {
+display: none;
+background: var(â€“card);
+border: 1px solid var(â€“border);
+border-radius: 16px;
+overflow: hidden;
+box-shadow: var(â€“shadow);
+}
+.panel.active { display: block; }
 
-  .panel-header {
-    padding: 22px 28px 16px;
-    border-bottom: 1px solid var(--border);
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-  .panel-header .icon {
-    width: 40px; height: 40px;
-    border-radius: 10px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1.1rem;
-    flex-shrink: 0;
-  }
-  .panel-header h2 {
-    font-family: 'DM Serif Display', serif;
-    font-size: 1.15rem;
-    letter-spacing: -.01em;
-  }
-  .panel-header p { font-size: .82rem; color: var(--muted); margin-top: 2px; }
-  .panel-header .badge {
-    margin-left: auto;
-    font-size: .7rem;
-    font-weight: 600;
-    padding: 4px 10px;
-    border-radius: 99px;
-    text-transform: uppercase;
-    letter-spacing: .04em;
-    flex-shrink: 0;
-  }
+.panel-header {
+padding: 22px 28px 16px;
+border-bottom: 1px solid var(â€“border);
+display: flex;
+align-items: center;
+gap: 12px;
+}
+.panel-header .icon {
+width: 40px; height: 40px;
+border-radius: 10px;
+display: flex; align-items: center; justify-content: center;
+font-size: 1.1rem;
+flex-shrink: 0;
+}
+.panel-header h2 {
+font-family: â€˜DM Serif Displayâ€™, serif;
+font-size: 1.15rem;
+letter-spacing: -.01em;
+}
+.panel-header p { font-size: .82rem; color: var(â€“muted); margin-top: 2px; }
+.panel-header .badge {
+margin-left: auto;
+font-size: .7rem;
+font-weight: 600;
+padding: 4px 10px;
+border-radius: 99px;
+text-transform: uppercase;
+letter-spacing: .04em;
+flex-shrink: 0;
+}
 
-  /* Doctolib green */
-  #doctolib .panel-header .icon { background: #edf7f5; }
-  #doctolib .panel-header .badge { background: #edf7f5; color: var(--accent); }
-  /* Jameda blue */
-  #jameda .panel-header .icon { background: #eff6ff; }
-  #jameda .panel-header .badge { background: #eff6ff; color: var(--accent3); }
-  /* 116117 red */
-  #\31 16117 .panel-header .icon { background: #fff1f0; }
-  #\31 16117 .panel-header .badge { background: #fff1f0; color: var(--accent2); }
-  /* KV Termin purple */
-  #kvtermin .panel-header .icon { background: #f5f3ff; }
-  #kvtermin .panel-header .badge { background: #f5f3ff; color: var(--accent4); }
+/* Doctolib green */
+#doctolib .panel-header .icon { background: #edf7f5; }
+#doctolib .panel-header .badge { background: #edf7f5; color: var(â€“accent); }
+/* Jameda blue */
+#jameda .panel-header .icon { background: #eff6ff; }
+#jameda .panel-header .badge { background: #eff6ff; color: var(â€“accent3); }
+/* 116117 red */
+#\31 16117 .panel-header .icon { background: #fff1f0; }
+#\31 16117 .panel-header .badge { background: #fff1f0; color: var(â€“accent2); }
+/* KV Termin purple */
+#kvtermin .panel-header .icon { background: #f5f3ff; }
+#kvtermin .panel-header .badge { background: #f5f3ff; color: var(â€“accent4); }
 
-  /* ── FORM GRID ── */
-  .form-body { padding: 24px 28px 28px; }
-  .form-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    margin-bottom: 18px;
-  }
-  @media (max-width: 540px) { .form-grid { grid-template-columns: 1fr; } }
-  .form-full { grid-column: 1 / -1; }
+/* â”€â”€ FORM GRID â”€â”€ */
+.form-body { padding: 24px 28px 28px; }
+.form-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 16px;
+margin-bottom: 18px;
+}
+@media (max-width: 540px) { .form-grid { grid-template-columns: 1fr; } }
+.form-full { grid-column: 1 / -1; }
 
-  .field label {
-    display: block;
-    font-size: .78rem;
-    font-weight: 600;
-    color: var(--muted);
-    text-transform: uppercase;
-    letter-spacing: .05em;
-    margin-bottom: 6px;
-  }
-  .field select, .field input[type=text], .field input[type=number], .field input[type=range] {
-    width: 100%;
-    border: 1.5px solid var(--border);
-    border-radius: 10px;
-    padding: 10px 14px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: .92rem;
-    color: var(--text);
-    background: var(--bg);
-    appearance: none;
-    -webkit-appearance: none;
-    outline: none;
-    transition: border-color .15s;
-  }
-  .field select:focus, .field input:focus { border-color: var(--accent); }
-  .field input[type=range] { padding: 6px 0; cursor: pointer; }
-  .range-label {
-    display: flex;
-    justify-content: space-between;
-    font-size: .78rem;
-    color: var(--muted);
-    margin-top: 4px;
-  }
-  .range-val { font-weight: 600; color: var(--text); }
+.field label {
+display: block;
+font-size: .78rem;
+font-weight: 600;
+color: var(â€“muted);
+text-transform: uppercase;
+letter-spacing: .05em;
+margin-bottom: 6px;
+}
+.field select, .field input[type=text], .field input[type=number], .field input[type=range] {
+width: 100%;
+border: 1.5px solid var(â€“border);
+border-radius: 10px;
+padding: 10px 14px;
+font-family: â€˜DM Sansâ€™, sans-serif;
+font-size: .92rem;
+color: var(â€“text);
+background: var(â€“bg);
+appearance: none;
+-webkit-appearance: none;
+outline: none;
+transition: border-color .15s;
+}
+.field select:focus, .field input:focus { border-color: var(â€“accent); }
+.field input[type=range] { padding: 6px 0; cursor: pointer; }
+.range-label {
+display: flex;
+justify-content: space-between;
+font-size: .78rem;
+color: var(â€“muted);
+margin-top: 4px;
+}
+.range-val { font-weight: 600; color: var(â€“text); }
 
-  /* ── GENERATE BUTTON ── */
-  .generate-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    width: 100%;
-    padding: 14px 20px;
-    border: none;
-    border-radius: 12px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 1rem;
-    font-weight: 600;
-    color: white;
-    cursor: pointer;
-    margin-top: 4px;
-    transition: opacity .15s, transform .1s;
-  }
-  .generate-btn:hover { opacity: .9; }
-  .generate-btn:active { transform: scale(.98); }
-  #doctolib .generate-btn  { background: var(--accent); }
-  #jameda .generate-btn    { background: var(--accent3); }
-  #\31 16117 .generate-btn { background: var(--accent2); }
-  #kvtermin .generate-btn  { background: var(--accent4); }
+/* â”€â”€ GENERATE BUTTON â”€â”€ */
+.generate-btn {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 8px;
+width: 100%;
+padding: 14px 20px;
+border: none;
+border-radius: 12px;
+font-family: â€˜DM Sansâ€™, sans-serif;
+font-size: 1rem;
+font-weight: 600;
+color: white;
+cursor: pointer;
+margin-top: 4px;
+transition: opacity .15s, transform .1s;
+}
+.generate-btn:hover { opacity: .9; }
+.generate-btn:active { transform: scale(.98); }
+#doctolib .generate-btn  { background: var(â€“accent); }
+#jameda .generate-btn    { background: var(â€“accent3); }
+#\31 16117 .generate-btn { background: var(â€“accent2); }
+#kvtermin .generate-btn  { background: var(â€“accent4); }
 
-  /* ── OUTPUT ── */
-  .output { display: none; padding: 0 28px 28px; }
-  .output.show { display: block; }
-  .output-inner {
-    border: 1.5px solid var(--border);
-    border-radius: 12px;
-    overflow: hidden;
-  }
-  .output-label {
-    padding: 10px 16px;
-    font-size: .75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: .06em;
-    border-bottom: 1px solid var(--border);
-    background: var(--bg);
-    color: var(--muted);
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
-  .url-text {
-    font-family: 'Courier New', monospace;
-    font-size: .78rem;
-    padding: 14px 16px;
-    word-break: break-all;
-    background: white;
-    color: var(--text);
-    line-height: 1.5;
-  }
-  .output-actions {
-    display: flex;
-    gap: 10px;
-    margin-top: 14px;
-    flex-wrap: wrap;
-  }
-  .action-btn {
-    flex: 1;
-    min-width: 140px;
-    padding: 10px 14px;
-    border-radius: 10px;
-    border: 1.5px solid var(--border);
-    background: white;
-    font-family: 'DM Sans', sans-serif;
-    font-size: .85rem;
-    font-weight: 600;
-    cursor: pointer;
-    color: var(--text);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    transition: all .15s;
-    text-decoration: none;
-  }
-  .action-btn:hover { background: var(--bg); }
-  .action-btn.primary { background: var(--accent); color: white; border-color: var(--accent); }
-  #jameda .action-btn.primary    { background: var(--accent3); border-color: var(--accent3); }
-  #\31 16117 .action-btn.primary { background: var(--accent2); border-color: var(--accent2); }
-  #kvtermin .action-btn.primary  { background: var(--accent4); border-color: var(--accent4); }
+/* â”€â”€ OUTPUT â”€â”€ */
+.output { display: none; padding: 0 28px 28px; }
+.output.show { display: block; }
+.output-inner {
+border: 1.5px solid var(â€“border);
+border-radius: 12px;
+overflow: hidden;
+}
+.output-label {
+padding: 10px 16px;
+font-size: .75rem;
+font-weight: 700;
+text-transform: uppercase;
+letter-spacing: .06em;
+border-bottom: 1px solid var(â€“border);
+background: var(â€“bg);
+color: var(â€“muted);
+display: flex;
+align-items: center;
+gap: 6px;
+}
+.url-text {
+font-family: â€˜Courier Newâ€™, monospace;
+font-size: .78rem;
+padding: 14px 16px;
+word-break: break-all;
+background: white;
+color: var(â€“text);
+line-height: 1.5;
+}
+.output-actions {
+display: flex;
+gap: 10px;
+margin-top: 14px;
+flex-wrap: wrap;
+}
+.action-btn {
+flex: 1;
+min-width: 140px;
+padding: 10px 14px;
+border-radius: 10px;
+border: 1.5px solid var(â€“border);
+background: white;
+font-family: â€˜DM Sansâ€™, sans-serif;
+font-size: .85rem;
+font-weight: 600;
+cursor: pointer;
+color: var(â€“text);
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 6px;
+transition: all .15s;
+text-decoration: none;
+}
+.action-btn:hover { background: var(â€“bg); }
+.action-btn.primary { background: var(â€“accent); color: white; border-color: var(â€“accent); }
+#jameda .action-btn.primary    { background: var(â€“accent3); border-color: var(â€“accent3); }
+#\31 16117 .action-btn.primary { background: var(â€“accent2); border-color: var(â€“accent2); }
+#kvtermin .action-btn.primary  { background: var(â€“accent4); border-color: var(â€“accent4); }
 
-  /* ── INSTRUCTIONS ── */
-  .instructions {
-    margin-top: 20px;
-    border-top: 1px solid var(--border);
-  }
-  .instr-toggle {
-    width: 100%;
-    padding: 14px 28px;
-    background: none;
-    border: none;
-    text-align: left;
-    font-family: 'DM Sans', sans-serif;
-    font-size: .9rem;
-    font-weight: 600;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: var(--text);
-    transition: background .15s;
-  }
-  .instr-toggle:hover { background: var(--bg); }
-  .instr-toggle .chevron { margin-left: auto; transition: transform .2s; font-size: .75rem; }
-  .instr-toggle.open .chevron { transform: rotate(180deg); }
-  .instr-body {
-    display: none;
-    padding: 4px 28px 24px;
-  }
-  .instr-body.show { display: block; }
-  .steps { counter-reset: step; list-style: none; }
-  .step {
-    counter-increment: step;
-    display: flex;
-    gap: 14px;
-    margin-bottom: 18px;
-    align-items: flex-start;
-  }
-  .step::before {
-    content: counter(step);
-    flex-shrink: 0;
-    width: 26px; height: 26px;
-    border-radius: 50%;
-    background: var(--accent);
-    color: white;
-    font-size: .78rem;
-    font-weight: 700;
-    display: flex; align-items: center; justify-content: center;
-    margin-top: 1px;
-  }
-  #jameda .step::before    { background: var(--accent3); }
-  #\31 16117 .step::before { background: var(--accent2); }
-  #kvtermin .step::before  { background: var(--accent4); }
-  .step p { font-size: .88rem; line-height: 1.55; color: var(--muted); }
-  .step p strong { color: var(--text); }
-  .step code {
-    display: inline-block;
-    background: var(--bg);
-    border: 1px solid var(--border);
-    border-radius: 5px;
-    padding: 1px 6px;
-    font-size: .8rem;
-    font-family: 'Courier New', monospace;
-    color: var(--text);
-  }
-  .note {
-    background: #fff8ec;
-    border: 1px solid #f0d89a;
-    border-radius: 10px;
-    padding: 12px 16px;
-    font-size: .82rem;
-    color: #7a5c00;
-    line-height: 1.55;
-    margin-top: 12px;
-  }
+/* â”€â”€ INSTRUCTIONS â”€â”€ */
+.instructions {
+margin-top: 20px;
+border-top: 1px solid var(â€“border);
+}
+.instr-toggle {
+width: 100%;
+padding: 14px 28px;
+background: none;
+border: none;
+text-align: left;
+font-family: â€˜DM Sansâ€™, sans-serif;
+font-size: .9rem;
+font-weight: 600;
+cursor: pointer;
+display: flex;
+align-items: center;
+gap: 8px;
+color: var(â€“text);
+transition: background .15s;
+}
+.instr-toggle:hover { background: var(â€“bg); }
+.instr-toggle .chevron { margin-left: auto; transition: transform .2s; font-size: .75rem; }
+.instr-toggle.open .chevron { transform: rotate(180deg); }
+.instr-body {
+display: none;
+padding: 4px 28px 24px;
+}
+.instr-body.show { display: block; }
+.steps { counter-reset: step; list-style: none; }
+.step {
+counter-increment: step;
+display: flex;
+gap: 14px;
+margin-bottom: 18px;
+align-items: flex-start;
+}
+.step::before {
+content: counter(step);
+flex-shrink: 0;
+width: 26px; height: 26px;
+border-radius: 50%;
+background: var(â€“accent);
+color: white;
+font-size: .78rem;
+font-weight: 700;
+display: flex; align-items: center; justify-content: center;
+margin-top: 1px;
+}
+#jameda .step::before    { background: var(â€“accent3); }
+#\31 16117 .step::before { background: var(â€“accent2); }
+#kvtermin .step::before  { background: var(â€“accent4); }
+.step p { font-size: .88rem; line-height: 1.55; color: var(â€“muted); }
+.step p strong { color: var(â€“text); }
+.step code {
+display: inline-block;
+background: var(â€“bg);
+border: 1px solid var(â€“border);
+border-radius: 5px;
+padding: 1px 6px;
+font-size: .8rem;
+font-family: â€˜Courier Newâ€™, monospace;
+color: var(â€“text);
+}
+.note {
+background: #fff8ec;
+border: 1px solid #f0d89a;
+border-radius: 10px;
+padding: 12px 16px;
+font-size: .82rem;
+color: #7a5c00;
+line-height: 1.55;
+margin-top: 12px;
+}
 
-  /* ── MULTI-SOURCE INFO ── */
-  .multi-info {
-    max-width: 820px;
-    margin: 0 auto 48px;
-    padding: 0 20px;
-  }
-  .multi-info h3 {
-    font-family: 'DM Serif Display', serif;
-    font-size: 1.1rem;
-    margin-bottom: 12px;
-  }
-  .source-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 12px;
-  }
-  .source-card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 16px;
-    box-shadow: var(--shadow);
-  }
-  .source-card .dot {
-    width: 10px; height: 10px;
-    border-radius: 50%;
-    display: inline-block;
-    margin-right: 6px;
-  }
-  .source-card h4 { font-size: .9rem; font-weight: 600; margin-bottom: 6px; }
-  .source-card p { font-size: .78rem; color: var(--muted); line-height: 1.5; }
-  .source-card a { color: var(--accent); font-weight: 600; text-decoration: none; font-size: .78rem; }
+/* â”€â”€ MULTI-SOURCE INFO â”€â”€ */
+.multi-info {
+max-width: 820px;
+margin: 0 auto 48px;
+padding: 0 20px;
+}
+.multi-info h3 {
+font-family: â€˜DM Serif Displayâ€™, serif;
+font-size: 1.1rem;
+margin-bottom: 12px;
+}
+.source-cards {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+gap: 12px;
+}
+.source-card {
+background: var(â€“card);
+border: 1px solid var(â€“border);
+border-radius: 12px;
+padding: 16px;
+box-shadow: var(â€“shadow);
+}
+.source-card .dot {
+width: 10px; height: 10px;
+border-radius: 50%;
+display: inline-block;
+margin-right: 6px;
+}
+.source-card h4 { font-size: .9rem; font-weight: 600; margin-bottom: 6px; }
+.source-card p { font-size: .78rem; color: var(â€“muted); line-height: 1.5; }
+.source-card a { color: var(â€“accent); font-weight: 600; text-decoration: none; font-size: .78rem; }
 
-  /* ── FOOTER ── */
-  footer {
-    text-align: center;
-    padding: 24px;
-    font-size: .78rem;
-    color: var(--muted);
-    border-top: 1px solid var(--border);
-    background: var(--card);
-  }
-  footer a { color: var(--muted); text-decoration: underline; }
+/* â”€â”€ FOOTER â”€â”€ */
+footer {
+text-align: center;
+padding: 24px;
+font-size: .78rem;
+color: var(â€“muted);
+border-top: 1px solid var(â€“border);
+background: var(â€“card);
+}
+footer a { color: var(â€“muted); text-decoration: underline; }
+
+/* â”€â”€ AUTOCOMPLETE â”€â”€ */
+.autocomplete-wrap { position: relative; }
+.autocomplete-list {
+position: absolute;
+top: calc(100% + 4px);
+left: 0; right: 0;
+background: var(â€“card);
+border: 1.5px solid var(â€“accent);
+border-radius: 10px;
+overflow: hidden;
+z-index: 200;
+box-shadow: 0 4px 20px rgba(0,0,0,.12);
+max-height: 220px;
+overflow-y: auto;
+}
+.autocomplete-list li {
+list-style: none;
+padding: 9px 14px;
+font-size: .9rem;
+cursor: pointer;
+border-bottom: 1px solid var(â€“border);
+transition: background .1s;
+}
+.autocomplete-list li:last-child { border-bottom: none; }
+.autocomplete-list li:hover, .autocomplete-list li.active {
+background: var(â€“pill-bg);
+color: var(â€“accent);
+}
+.autocomplete-list li mark {
+background: none;
+color: var(â€“accent);
+font-weight: 700;
+}
 </style>
+
 </head>
 <body>
 
 <header>
-  <span class="logo">Termin-<em>Wächter</em></span>
-  <span class="pill">🏥 Kostenlos · Kein Account</span>
+  <span class="logo">Termin-<em>WÃ¤chter</em></span>
+  <span class="pill">ðŸ¥ Kostenlos Â· Kein Account</span>
 </header>
 
 <div class="hero">
-  <h1>Facharzttermine <em>automatisch</em> überwachen</h1>
-  <p>iPhone-Benachrichtigungen per Kurzbefehl, sobald ein Termin frei wird –<br>auf Doctolib, Jameda, 116117 und weiteren Plattformen.</p>
+  <h1>Facharzttermine <em>automatisch</em> Ã¼berwachen</h1>
+  <p>iPhone-Benachrichtigungen per Kurzbefehl, sobald ein Termin frei wird â€“<br>auf Doctolib, Jameda, 116117 und weiteren Plattformen.</p>
 </div>
 
 <!-- TABS -->
+
 <div class="tabs-wrapper">
   <div class="tabs">
-    <button class="tab-btn active" data-tab="doctolib">🟢 Doctolib</button>
-    <button class="tab-btn" data-tab="jameda">🔵 Jameda</button>
-    <button class="tab-btn" data-tab="116117">🔴 116117 / KV</button>
-    <button class="tab-btn" data-tab="kvtermin">🟣 Weitere Tipps</button>
+    <button class="tab-btn active" data-tab="doctolib">ðŸŸ¢ Doctolib</button>
+    <button class="tab-btn" data-tab="jameda">ðŸ”µ Jameda</button>
+    <button class="tab-btn" data-tab="116117">ðŸ”´ 116117 / KV</button>
+    <button class="tab-btn" data-tab="kvtermin">ðŸŸ£ Weitere Tipps</button>
   </div>
 </div>
 
 <!-- PANELS -->
+
 <div class="panel-wrapper">
 
-  <!-- ─── DOCTOLIB ─── -->
+  <!-- â”€â”€â”€ DOCTOLIB â”€â”€â”€ -->
+
   <div class="panel active" id="doctolib">
     <div class="panel-header">
-      <div class="icon">🟢</div>
+      <div class="icon">ðŸŸ¢</div>
       <div>
-        <h2>Doctolib Termin-Wächter</h2>
-        <p>Stündliche Benachrichtigungen bei neuen Doctolib-Terminen</p>
+        <h2>Doctolib Termin-WÃ¤chter</h2>
+        <p>StÃ¼ndliche Benachrichtigungen bei neuen Doctolib-Terminen</p>
       </div>
       <span class="badge">doctolib.de</span>
     </div>
@@ -480,12 +519,12 @@
             <option value="allgemeinmedizin">Allgemeinmedizin / Hausarzt</option>
             <option value="dermatologie">Dermatologe / Hautarzt</option>
             <option value="zahnarzt">Zahnarzt</option>
-            <option value="orthopaedie">Orthopädie</option>
+            <option value="orthopaedie">OrthopÃ¤die</option>
             <option value="augenheilkunde">Augenarzt</option>
             <option value="hno">HNO-Arzt</option>
             <option value="kardiologie">Kardiologie</option>
             <option value="neurologie">Neurologie</option>
-            <option value="gynaekologie">Gynäkologie</option>
+            <option value="gynaekologie">GynÃ¤kologie</option>
             <option value="psychiatrie">Psychiatrie</option>
             <option value="psychotherapie">Psychotherapie</option>
             <option value="radiologie">Radiologie</option>
@@ -497,7 +536,11 @@
         </div>
         <div class="field">
           <label>Stadt / Ort</label>
-          <input type="text" id="dl-stadt" placeholder="z. B. Berlin" value="">
+          <div class="autocomplete-wrap">
+            <input type="text" id="dl-stadt" placeholder="z. B. Berlin" autocomplete="off"
+                   oninput="acFilter('dl-stadt','dl-ac')" onkeydown="acKey(event,'dl-ac')">
+            <ul class="autocomplete-list" id="dl-ac" style="display:none"></ul>
+          </div>
         </div>
         <div class="field">
           <label>Versicherung</label>
@@ -508,55 +551,56 @@
           </select>
         </div>
         <div class="field">
-          <label>Max. Radius — <span class="range-val" id="dl-radius-val">20 km</span></label>
+          <label>Max. Radius â€” <span class="range-val" id="dl-radius-val">20 km</span></label>
           <input type="range" id="dl-radius" min="5" max="100" step="5" value="20"
                  oninput="document.getElementById('dl-radius-val').textContent=this.value+' km'">
           <div class="range-label"><span>5 km</span><span>100 km</span></div>
         </div>
         <div class="field form-full">
-          <label>Termine bis zu … Tage im Voraus — <span class="range-val" id="dl-tage-val">60 Tage</span></label>
+          <label>Termine bis zu â€¦ Tage im Voraus â€” <span class="range-val" id="dl-tage-val">60 Tage</span></label>
           <input type="range" id="dl-tage" min="7" max="180" step="7" value="60"
                  oninput="document.getElementById('dl-tage-val').textContent=this.value+' Tage'">
           <div class="range-label"><span>7 Tage</span><span>180 Tage</span></div>
         </div>
       </div>
-      <button class="generate-btn" onclick="generateDoctolib()">📲 Meinen Kurzbefehl erstellen</button>
+      <button class="generate-btn" onclick="generateDoctolib()">ðŸ“² Meinen Kurzbefehl erstellen</button>
     </div>
     <div class="output" id="dl-output">
       <div class="output-inner">
-        <div class="output-label">🔗 Deine persönliche Check-URL</div>
+        <div class="output-label">ðŸ”— Deine persÃ¶nliche Check-URL</div>
         <div class="url-text" id="dl-url"></div>
       </div>
       <div class="output-actions">
-        <button class="action-btn" onclick="copyUrl('dl-url')">⎘ URL kopieren</button>
-        <a class="action-btn primary" id="dl-test-link" href="#" target="_blank">↗ Im Browser testen</a>
+        <button class="action-btn" onclick="copyUrl('dl-url')">âŽ˜ URL kopieren</button>
+        <a class="action-btn primary" id="dl-test-link" href="#" target="_blank">â†— Im Browser testen</a>
       </div>
     </div>
     <div class="instructions">
       <button class="instr-toggle" onclick="toggleInstr(this)">
-        📱 So richtest du den iOS-Kurzbefehl ein <span class="chevron">▼</span>
+        ðŸ“± So richtest du den iOS-Kurzbefehl ein <span class="chevron">â–¼</span>
       </button>
       <div class="instr-body">
         <ol class="steps">
-          <li class="step"><p>Öffne die <strong>Kurzbefehle-App</strong> auf deinem iPhone und tippe oben rechts auf <strong>+</strong></p></li>
-          <li class="step"><p><strong>„Aktion hinzufügen"</strong> → suche nach <strong>„Inhalt von URL abrufen"</strong> → füge deine URL oben ein, Methode: <code>GET</code></p></li>
-          <li class="step"><p>Neue Aktion: <strong>„Wert aus Wörterbuch holen"</strong><br>Schlüssel: <code>gefunden</code></p></li>
-          <li class="step"><p>Neue Aktion: <strong>„Wenn"</strong> → Bedingung: <strong>Eingabe ist wahr</strong></p></li>
-          <li class="step"><p>Innerhalb von „Wenn": <strong>„Benachrichtigung anzeigen"</strong><br>Titel: <code>🗓 Termin verfügbar!</code><br>Text: Wörterbuch-Wert mit Schlüssel <code>nachricht</code></p></li>
-          <li class="step"><p>Kurzbefehl <strong>speichern</strong> → unten auf <strong>„Automation"</strong> → <strong>+</strong> → <strong>„Tageszeit"</strong> → Uhrzeiten wählen (z. B. 8 h, 11 h, 14 h, 17 h) → deinen Kurzbefehl auswählen</p></li>
+          <li class="step"><p>Ã–ffne die <strong>Kurzbefehle-App</strong> auf deinem iPhone und tippe oben rechts auf <strong>+</strong></p></li>
+          <li class="step"><p><strong>â€žAktion hinzufÃ¼gen"</strong> â†’ suche nach <strong>â€žInhalt von URL abrufen"</strong> â†’ fÃ¼ge deine URL oben ein, Methode: <code>GET</code></p></li>
+          <li class="step"><p>Neue Aktion: <strong>â€žWert aus WÃ¶rterbuch holen"</strong><br>SchlÃ¼ssel: <code>gefunden</code></p></li>
+          <li class="step"><p>Neue Aktion: <strong>â€žWenn"</strong> â†’ Bedingung: <strong>Eingabe ist wahr</strong></p></li>
+          <li class="step"><p>Innerhalb von â€žWenn": <strong>â€žBenachrichtigung anzeigen"</strong><br>Titel: <code>ðŸ—“ Termin verfÃ¼gbar!</code><br>Text: WÃ¶rterbuch-Wert mit SchlÃ¼ssel <code>nachricht</code></p></li>
+          <li class="step"><p>Kurzbefehl <strong>speichern</strong> â†’ unten auf <strong>â€žAutomation"</strong> â†’ <strong>+</strong> â†’ <strong>â€žTageszeit"</strong> â†’ Uhrzeiten wÃ¤hlen (z. B. 8 h, 11 h, 14 h, 17 h) â†’ deinen Kurzbefehl auswÃ¤hlen</p></li>
         </ol>
-        <div class="note">⚠ iOS zeigt bei automatisch ausgeführten Kurzbefehlen kurz ein kleines Banner „Automation ausgeführt". Das lässt sich leider nicht deaktivieren — ist aber harmlos.</div>
+        <div class="note">âš  iOS zeigt bei automatisch ausgefÃ¼hrten Kurzbefehlen kurz ein kleines Banner â€žAutomation ausgefÃ¼hrt". Das lÃ¤sst sich leider nicht deaktivieren â€” ist aber harmlos.</div>
       </div>
     </div>
   </div>
 
-  <!-- ─── JAMEDA ─── -->
+  <!-- â”€â”€â”€ JAMEDA â”€â”€â”€ -->
+
   <div class="panel" id="jameda">
     <div class="panel-header">
-      <div class="icon">🔵</div>
+      <div class="icon">ðŸ”µ</div>
       <div>
-        <h2>Jameda Termin-Wächter</h2>
-        <p>Jameda ist das zweitgrößte Arztportal in Deutschland</p>
+        <h2>Jameda Termin-WÃ¤chter</h2>
+        <p>Jameda ist das zweitgrÃ¶ÃŸte Arztportal in Deutschland</p>
       </div>
       <span class="badge">jameda.de</span>
     </div>
@@ -568,12 +612,12 @@
             <option value="allgemeinmedizin">Allgemeinmedizin / Hausarzt</option>
             <option value="hautarzt">Dermatologe / Hautarzt</option>
             <option value="zahnarzt">Zahnarzt</option>
-            <option value="orthopaedie">Orthopädie</option>
+            <option value="orthopaedie">OrthopÃ¤die</option>
             <option value="augenarzt">Augenarzt</option>
             <option value="hno-arzt">HNO-Arzt</option>
             <option value="kardiologe">Kardiologie</option>
             <option value="neurologe">Neurologie</option>
-            <option value="frauenarzt">Gynäkologie</option>
+            <option value="frauenarzt">GynÃ¤kologie</option>
             <option value="psychiater">Psychiatrie</option>
             <option value="psychotherapeut">Psychotherapie</option>
             <option value="radiologe">Radiologie</option>
@@ -585,7 +629,11 @@
         </div>
         <div class="field">
           <label>Stadt / Ort</label>
-          <input type="text" id="jm-stadt" placeholder="z. B. München">
+          <div class="autocomplete-wrap">
+            <input type="text" id="jm-stadt" placeholder="z. B. MÃ¼nchen" autocomplete="off"
+                   oninput="acFilter('jm-stadt','jm-ac')" onkeydown="acKey(event,'jm-ac')">
+            <ul class="autocomplete-list" id="jm-ac" style="display:none"></ul>
+          </div>
         </div>
         <div class="field">
           <label>Versicherung</label>
@@ -596,55 +644,56 @@
           </select>
         </div>
         <div class="field">
-          <label>Max. Radius — <span class="range-val" id="jm-radius-val">20 km</span></label>
+          <label>Max. Radius â€” <span class="range-val" id="jm-radius-val">20 km</span></label>
           <input type="range" id="jm-radius" min="5" max="100" step="5" value="20"
                  oninput="document.getElementById('jm-radius-val').textContent=this.value+' km'">
           <div class="range-label"><span>5 km</span><span>100 km</span></div>
         </div>
         <div class="field form-full">
-          <label>Termine bis zu … Tage im Voraus — <span class="range-val" id="jm-tage-val">60 Tage</span></label>
+          <label>Termine bis zu â€¦ Tage im Voraus â€” <span class="range-val" id="jm-tage-val">60 Tage</span></label>
           <input type="range" id="jm-tage" min="7" max="180" step="7" value="60"
                  oninput="document.getElementById('jm-tage-val').textContent=this.value+' Tage'">
           <div class="range-label"><span>7 Tage</span><span>180 Tage</span></div>
         </div>
       </div>
-      <button class="generate-btn" onclick="generateJameda()">📲 Meinen Kurzbefehl erstellen</button>
+      <button class="generate-btn" onclick="generateJameda()">ðŸ“² Meinen Kurzbefehl erstellen</button>
     </div>
     <div class="output" id="jm-output">
       <div class="output-inner">
-        <div class="output-label">🔗 Deine persönliche Check-URL</div>
+        <div class="output-label">ðŸ”— Deine persÃ¶nliche Check-URL</div>
         <div class="url-text" id="jm-url"></div>
       </div>
       <div class="output-actions">
-        <button class="action-btn" onclick="copyUrl('jm-url')">⎘ URL kopieren</button>
-        <a class="action-btn primary" id="jm-test-link" href="#" target="_blank">↗ Jameda öffnen</a>
+        <button class="action-btn" onclick="copyUrl('jm-url')">âŽ˜ URL kopieren</button>
+        <a class="action-btn primary" id="jm-test-link" href="#" target="_blank">â†— Jameda Ã¶ffnen</a>
       </div>
     </div>
     <div class="instructions">
       <button class="instr-toggle" onclick="toggleInstr(this)">
-        📱 So richtest du den iOS-Kurzbefehl ein <span class="chevron">▼</span>
+        ðŸ“± So richtest du den iOS-Kurzbefehl ein <span class="chevron">â–¼</span>
       </button>
       <div class="instr-body">
         <ol class="steps">
-          <li class="step"><p>Öffne die <strong>Kurzbefehle-App</strong> auf deinem iPhone und tippe oben rechts auf <strong>+</strong></p></li>
-          <li class="step"><p><strong>„Aktion hinzufügen"</strong> → suche nach <strong>„Inhalt von URL abrufen"</strong> → füge die Jameda-URL ein, Methode: <code>GET</code></p></li>
-          <li class="step"><p>Neue Aktion: <strong>„Text enthält"</strong> → prüfe ob der zurückgegebene HTML-Text <code>Termin buchen</code> enthält (das ist das Buchungsbutton-Label auf Jameda)</p></li>
-          <li class="step"><p>Neue Aktion: <strong>„Wenn"</strong> → Bedingung: <strong>Eingabe enthält</strong> „Termin buchen"</p></li>
-          <li class="step"><p>Innerhalb von „Wenn": <strong>„Benachrichtigung anzeigen"</strong><br>Titel: <code>🗓 Jameda: Termin verfügbar!</code><br>Text: <code>Fachrichtung in [Stadt]</code></p></li>
-          <li class="step"><p>Automation einrichten: <strong>„Tageszeit"</strong> → stündliche Ausführung (z. B. 8, 11, 14, 17 Uhr)</p></li>
+          <li class="step"><p>Ã–ffne die <strong>Kurzbefehle-App</strong> auf deinem iPhone und tippe oben rechts auf <strong>+</strong></p></li>
+          <li class="step"><p><strong>â€žAktion hinzufÃ¼gen"</strong> â†’ suche nach <strong>â€žInhalt von URL abrufen"</strong> â†’ fÃ¼ge die Jameda-URL ein, Methode: <code>GET</code></p></li>
+          <li class="step"><p>Neue Aktion: <strong>â€žText enthÃ¤lt"</strong> â†’ prÃ¼fe ob der zurÃ¼ckgegebene HTML-Text <code>Termin buchen</code> enthÃ¤lt (das ist das Buchungsbutton-Label auf Jameda)</p></li>
+          <li class="step"><p>Neue Aktion: <strong>â€žWenn"</strong> â†’ Bedingung: <strong>Eingabe enthÃ¤lt</strong> â€žTermin buchen"</p></li>
+          <li class="step"><p>Innerhalb von â€žWenn": <strong>â€žBenachrichtigung anzeigen"</strong><br>Titel: <code>ðŸ—“ Jameda: Termin verfÃ¼gbar!</code><br>Text: <code>Fachrichtung in [Stadt]</code></p></li>
+          <li class="step"><p>Automation einrichten: <strong>â€žTageszeit"</strong> â†’ stÃ¼ndliche AusfÃ¼hrung (z. B. 8, 11, 14, 17 Uhr)</p></li>
         </ol>
-        <div class="note">💡 Jameda zeigt auf Suchergebnisseiten direkt an, ob Online-Terminbuchung verfügbar ist. Die URL lässt sich als Monitoring-Link nutzen.</div>
+        <div class="note">ðŸ’¡ Jameda zeigt auf Suchergebnisseiten direkt an, ob Online-Terminbuchung verfÃ¼gbar ist. Die URL lÃ¤sst sich als Monitoring-Link nutzen.</div>
       </div>
     </div>
   </div>
 
-  <!-- ─── 116117 ─── -->
+  <!-- â”€â”€â”€ 116117 â”€â”€â”€ -->
+
   <div class="panel" id="116117">
     <div class="panel-header">
-      <div class="icon">🔴</div>
+      <div class="icon">ðŸ”´</div>
       <div>
         <h2>116117 / KV-Terminservice</h2>
-        <p>Offizieller Service der Kassenärztlichen Bundesvereinigung – nur für gesetzlich Versicherte</p>
+        <p>Offizieller Service der KassenÃ¤rztlichen Bundesvereinigung â€“ nur fÃ¼r gesetzlich Versicherte</p>
       </div>
       <span class="badge">116117-termine.de</span>
     </div>
@@ -655,12 +704,12 @@
           <select id="kv-fach">
             <option value="hausarzt">Hausarzt</option>
             <option value="augenarzt">Augenarzt</option>
-            <option value="frauenarzt">Frauenarzt / Gynäkologie</option>
+            <option value="frauenarzt">Frauenarzt / GynÃ¤kologie</option>
             <option value="kinder-und-jugendarzt">Kinder- und Jugendarzt</option>
             <option value="psychotherapeut">Psychotherapeut</option>
             <option value="hautarzt">Hautarzt</option>
             <option value="hno-arzt">HNO-Arzt</option>
-            <option value="orthopaedie">Orthopädie</option>
+            <option value="orthopaedie">OrthopÃ¤die</option>
             <option value="internist">Internist</option>
             <option value="neurologe">Neurologe</option>
             <option value="urologe">Urologe</option>
@@ -672,47 +721,48 @@
           <input type="text" id="kv-plz" placeholder="z. B. 10115" maxlength="5">
         </div>
         <div class="field form-full">
-          <label>Max. Radius — <span class="range-val" id="kv-radius-val">25 km</span></label>
+          <label>Max. Radius â€” <span class="range-val" id="kv-radius-val">25 km</span></label>
           <input type="range" id="kv-radius" min="5" max="75" step="5" value="25"
                  oninput="document.getElementById('kv-radius-val').textContent=this.value+' km'">
           <div class="range-label"><span>5 km</span><span>75 km</span></div>
         </div>
       </div>
-      <button class="generate-btn" onclick="generate116117()">📲 Link & Tipps anzeigen</button>
+      <button class="generate-btn" onclick="generate116117()">ðŸ“² Link & Tipps anzeigen</button>
     </div>
     <div class="output" id="kv-output">
       <div class="output-inner">
-        <div class="output-label">🔗 Direkt-Link zum 116117 eTerminservice</div>
+        <div class="output-label">ðŸ”— Direkt-Link zum 116117 eTerminservice</div>
         <div class="url-text" id="kv-url"></div>
       </div>
       <div class="output-actions">
-        <button class="action-btn" onclick="copyUrl('kv-url')">⎘ URL kopieren</button>
-        <a class="action-btn primary" id="kv-test-link" href="#" target="_blank">↗ eTerminservice öffnen</a>
+        <button class="action-btn" onclick="copyUrl('kv-url')">âŽ˜ URL kopieren</button>
+        <a class="action-btn primary" id="kv-test-link" href="#" target="_blank">â†— eTerminservice Ã¶ffnen</a>
       </div>
     </div>
     <div class="instructions">
       <button class="instr-toggle" onclick="toggleInstr(this)">
-        📱 So nutzt du die 116117 optimal <span class="chevron">▼</span>
+        ðŸ“± So nutzt du die 116117 optimal <span class="chevron">â–¼</span>
       </button>
       <div class="instr-body">
         <ol class="steps">
-          <li class="step"><p>Lass dir vom Hausarzt eine <strong>Überweisung mit Vermittlungscode</strong> (12-stellig) ausstellen – das ist dein „Ticket" für die schnelle Vermittlung</p></li>
-          <li class="step"><p>Gehe auf <strong>www.eterminservice.de</strong> oder öffne die <strong>116117.app</strong> (kostenfrei im App Store / Play Store) und buche direkt online</p></li>
-          <li class="step"><p>Alternativ: Ruf <strong>116117</strong> an – rund um die Uhr, 7 Tage die Woche. Die TSS ist <strong>gesetzlich verpflichtet</strong>, dir innerhalb von <strong>4 Wochen</strong> einen Termin zu vermitteln</p></li>
+          <li class="step"><p>Lass dir vom Hausarzt eine <strong>Ãœberweisung mit Vermittlungscode</strong> (12-stellig) ausstellen â€“ das ist dein â€žTicket" fÃ¼r die schnelle Vermittlung</p></li>
+          <li class="step"><p>Gehe auf <strong>www.eterminservice.de</strong> oder Ã¶ffne die <strong>116117.app</strong> (kostenfrei im App Store / Play Store) und buche direkt online</p></li>
+          <li class="step"><p>Alternativ: Ruf <strong>116117</strong> an â€“ rund um die Uhr, 7 Tage die Woche. Die TSS ist <strong>gesetzlich verpflichtet</strong>, dir innerhalb von <strong>4 Wochen</strong> einen Termin zu vermitteln</p></li>
           <li class="step"><p>Nutze die <strong>Erinnerungsfunktion</strong> im eTerminservice, um per E-Mail informiert zu werden, wenn neue Slots frei werden</p></li>
-          <li class="step"><p>Für Kurzbefehl: Öffne <strong>Kurzbefehle-App</strong> → Inhalt von URL abrufen (eTerminservice-Link) → prüfe ob Text <code>Termin verfügbar</code> enthält → Benachrichtigung anzeigen → Automation täglich</p></li>
+          <li class="step"><p>FÃ¼r Kurzbefehl: Ã–ffne <strong>Kurzbefehle-App</strong> â†’ Inhalt von URL abrufen (eTerminservice-Link) â†’ prÃ¼fe ob Text <code>Termin verfÃ¼gbar</code> enthÃ¤lt â†’ Benachrichtigung anzeigen â†’ Automation tÃ¤glich</p></li>
         </ol>
-        <div class="note">ℹ️ Bei Augenarzt und Gynäkologie brauchst du <strong>keine</strong> Überweisung. Die TSS ist ausschließlich für <strong>gesetzlich Versicherte</strong> und kostet dich nichts extra.</div>
+        <div class="note">â„¹ï¸ Bei Augenarzt und GynÃ¤kologie brauchst du <strong>keine</strong> Ãœberweisung. Die TSS ist ausschlieÃŸlich fÃ¼r <strong>gesetzlich Versicherte</strong> und kostet dich nichts extra.</div>
       </div>
     </div>
   </div>
 
-  <!-- ─── WEITERE TIPPS ─── -->
+  <!-- â”€â”€â”€ WEITERE TIPPS â”€â”€â”€ -->
+
   <div class="panel" id="kvtermin">
     <div class="panel-header">
-      <div class="icon">🟣</div>
+      <div class="icon">ðŸŸ£</div>
       <div>
-        <h2>Weitere Strategien für GKV-Patienten</h2>
+        <h2>Weitere Strategien fÃ¼r GKV-Patienten</h2>
         <p>Mehr Wege zu schnellen Facharzt-Terminen als gesetzlich Versicherter</p>
       </div>
       <span class="badge">Tipps & Tricks</span>
@@ -720,77 +770,81 @@
     <div class="form-body">
       <div style="display:grid; gap: 16px;">
 
-        <div style="background:var(--bg); border-radius: 12px; padding: 18px; border: 1px solid var(--border);">
-          <h3 style="font-size:.95rem; font-weight:700; margin-bottom: 8px;">🏥 Direkt in der Praxis anrufen – Stornolisten</h3>
-          <p style="font-size:.85rem; color: var(--muted); line-height:1.6;">
-            Viele Praxen führen <strong style="color:var(--text)">Wartelisten für Absagen</strong>. Ruf morgens gegen 8–9 Uhr an – genau dann, wenn Patienten ihren Termin absagen. Frage explizit: <em>„Haben Sie eine Stornoliste, auf die ich mich setzen lassen kann?"</em>
-          </p>
-        </div>
-
-        <div style="background:var(--bg); border-radius: 12px; padding: 18px; border: 1px solid var(--border);">
-          <h3 style="font-size:.95rem; font-weight:700; margin-bottom: 8px;">🔄 Doctolib Warteliste nutzen</h3>
-          <p style="font-size:.85rem; color: var(--muted); line-height:1.6;">
-            Wenn du auf Doctolib einen Termin buchst, der erst in Wochen liegt, aktiviere die <strong style="color:var(--text)">Wartelisten-Funktion</strong>. Du wirst automatisch benachrichtigt, wenn frühere Slots frei werden. Das ist die offiziell eingebaute Alternative zu diesem Wächter.
-          </p>
-        </div>
-
-        <div style="background:var(--bg); border-radius: 12px; padding: 18px; border: 1px solid var(--border);">
-          <h3 style="font-size:.95rem; font-weight:700; margin-bottom: 8px;">🕐 Zeitfenster-Strategie auf Doctolib</h3>
-          <p style="font-size:.85rem; color: var(--muted); line-height:1.6;">
-            Termine auf Doctolib sind nach Auswahl <strong style="color:var(--text)">15 Minuten reserviert</strong>, werden dann wieder freigegeben. Prüfe morgens zwischen 7–8 Uhr und abends 19–21 Uhr – dann canceln viele Patienten ihre Buchungen.
-          </p>
-        </div>
-
-        <div style="background:var(--bg); border-radius: 12px; padding: 18px; border: 1px solid var(--border);">
-          <h3 style="font-size:.95rem; font-weight:700; margin-bottom: 8px;">📞 KV-Dringlichkeitsregelung</h3>
-          <p style="font-size:.85rem; color: var(--muted); line-height:1.6;">
-            Bei nachweislicher medizinischer Dringlichkeit kannst du beim Hausarzt eine <strong style="color:var(--text)">dringende Überweisung</strong> anfordern. Die TSS (116117) muss dann innerhalb von <strong style="color:var(--text)">7 Tagen</strong> einen Termin vermitteln – nicht erst nach 4 Wochen.
-          </p>
-        </div>
-
-        <div style="background:var(--bg); border-radius: 12px; padding: 18px; border: 1px solid var(--border);">
-          <h3 style="font-size:.95rem; font-weight:700; margin-bottom: 8px;">🏨 Ambulanzen an Unikliniken</h3>
-          <p style="font-size:.85rem; color: var(--muted); line-height:1.6;">
-            Universitätskliniken und Krankenhausambulanzen nehmen auch GKV-Patienten oft mit kürzeren Wartezeiten an – besonders für spezialisierte Fachrichtungen. Suche nach der <strong style="color:var(--text)">Hochschulambulanz</strong> der nächsten Universitätsklinik deiner Fachrichtung.
-          </p>
-        </div>
-
-        <div style="background:var(--bg); border-radius: 12px; padding: 18px; border: 1px solid var(--border);">
-          <h3 style="font-size:.95rem; font-weight:700; margin-bottom: 8px;">🌐 arztsuche.de / gesundheit.de</h3>
-          <p style="font-size:.85rem; color: var(--muted); line-height:1.6;">
-            Weitere Portale wie <strong style="color:var(--text)">arztsuche.de</strong> oder <strong style="color:var(--text)">gesundheit.de</strong> listen ebenfalls Praxen mit Online-Terminbuchung. Manche Praxen sind nur auf einem Portal verfügbar – lohnt sich als Ergänzung zu Doctolib und Jameda.
-          </p>
-        </div>
-
-      </div>
+```
+    <div style="background:var(--bg); border-radius: 12px; padding: 18px; border: 1px solid var(--border);">
+      <h3 style="font-size:.95rem; font-weight:700; margin-bottom: 8px;">ðŸ¥ Direkt in der Praxis anrufen â€“ Stornolisten</h3>
+      <p style="font-size:.85rem; color: var(--muted); line-height:1.6;">
+        Viele Praxen fÃ¼hren <strong style="color:var(--text)">Wartelisten fÃ¼r Absagen</strong>. Ruf morgens gegen 8â€“9 Uhr an â€“ genau dann, wenn Patienten ihren Termin absagen. Frage explizit: <em>â€žHaben Sie eine Stornoliste, auf die ich mich setzen lassen kann?"</em>
+      </p>
     </div>
-    <div class="instructions">
-      <button class="instr-toggle" onclick="toggleInstr(this)">
-        📱 Kurzbefehl für mehrere Quellen kombinieren <span class="chevron">▼</span>
-      </button>
-      <div class="instr-body">
-        <ol class="steps">
-          <li class="step"><p>Erstelle <strong>separate Check-Aktionen</strong> in einem einzigen Kurzbefehl: URL 1 (Doctolib) → Prüfung → URL 2 (Jameda) → Prüfung → URL 3 (116117) → Prüfung</p></li>
-          <li class="step"><p>Verwende <strong>„Wenn … Dann Benachrichtigung"</strong> pro Quelle mit unterschiedlichem Titel, z.B. <code>🟢 Doctolib frei</code> vs <code>🔵 Jameda frei</code></p></li>
-          <li class="step"><p>Richte <strong>eine einzige Automation</strong> ein, die alle 3 Checks nacheinander ausführt – so bekommst du eine Sammel-Überprüfung pro Stunde</p></li>
-        </ol>
-        <div class="note">💡 Pro-Tipp: Setze die Automation auf mindestens 3× täglich (morgens, mittags, abends) – kurz nach Praxisöffnung, zur Mittagszeit und am frühen Abend wenn Absagen häufig sind.</div>
-      </div>
+
+    <div style="background:var(--bg); border-radius: 12px; padding: 18px; border: 1px solid var(--border);">
+      <h3 style="font-size:.95rem; font-weight:700; margin-bottom: 8px;">ðŸ”„ Doctolib Warteliste nutzen</h3>
+      <p style="font-size:.85rem; color: var(--muted); line-height:1.6;">
+        Wenn du auf Doctolib einen Termin buchst, der erst in Wochen liegt, aktiviere die <strong style="color:var(--text)">Wartelisten-Funktion</strong>. Du wirst automatisch benachrichtigt, wenn frÃ¼here Slots frei werden. Das ist die offiziell eingebaute Alternative zu diesem WÃ¤chter.
+      </p>
     </div>
+
+    <div style="background:var(--bg); border-radius: 12px; padding: 18px; border: 1px solid var(--border);">
+      <h3 style="font-size:.95rem; font-weight:700; margin-bottom: 8px;">ðŸ• Zeitfenster-Strategie auf Doctolib</h3>
+      <p style="font-size:.85rem; color: var(--muted); line-height:1.6;">
+        Termine auf Doctolib sind nach Auswahl <strong style="color:var(--text)">15 Minuten reserviert</strong>, werden dann wieder freigegeben. PrÃ¼fe morgens zwischen 7â€“8 Uhr und abends 19â€“21 Uhr â€“ dann canceln viele Patienten ihre Buchungen.
+      </p>
+    </div>
+
+    <div style="background:var(--bg); border-radius: 12px; padding: 18px; border: 1px solid var(--border);">
+      <h3 style="font-size:.95rem; font-weight:700; margin-bottom: 8px;">ðŸ“ž KV-Dringlichkeitsregelung</h3>
+      <p style="font-size:.85rem; color: var(--muted); line-height:1.6;">
+        Bei nachweislicher medizinischer Dringlichkeit kannst du beim Hausarzt eine <strong style="color:var(--text)">dringende Ãœberweisung</strong> anfordern. Die TSS (116117) muss dann innerhalb von <strong style="color:var(--text)">7 Tagen</strong> einen Termin vermitteln â€“ nicht erst nach 4 Wochen.
+      </p>
+    </div>
+
+    <div style="background:var(--bg); border-radius: 12px; padding: 18px; border: 1px solid var(--border);">
+      <h3 style="font-size:.95rem; font-weight:700; margin-bottom: 8px;">ðŸ¨ Ambulanzen an Unikliniken</h3>
+      <p style="font-size:.85rem; color: var(--muted); line-height:1.6;">
+        UniversitÃ¤tskliniken und Krankenhausambulanzen nehmen auch GKV-Patienten oft mit kÃ¼rzeren Wartezeiten an â€“ besonders fÃ¼r spezialisierte Fachrichtungen. Suche nach der <strong style="color:var(--text)">Hochschulambulanz</strong> der nÃ¤chsten UniversitÃ¤tsklinik deiner Fachrichtung.
+      </p>
+    </div>
+
+    <div style="background:var(--bg); border-radius: 12px; padding: 18px; border: 1px solid var(--border);">
+      <h3 style="font-size:.95rem; font-weight:700; margin-bottom: 8px;">ðŸŒ arztsuche.de / gesundheit.de</h3>
+      <p style="font-size:.85rem; color: var(--muted); line-height:1.6;">
+        Weitere Portale wie <strong style="color:var(--text)">arztsuche.de</strong> oder <strong style="color:var(--text)">gesundheit.de</strong> listen ebenfalls Praxen mit Online-Terminbuchung. Manche Praxen sind nur auf einem Portal verfÃ¼gbar â€“ lohnt sich als ErgÃ¤nzung zu Doctolib und Jameda.
+      </p>
+    </div>
+
+  </div>
+</div>
+<div class="instructions">
+  <button class="instr-toggle" onclick="toggleInstr(this)">
+    ðŸ“± Kurzbefehl fÃ¼r mehrere Quellen kombinieren <span class="chevron">â–¼</span>
+  </button>
+  <div class="instr-body">
+    <ol class="steps">
+      <li class="step"><p>Erstelle <strong>separate Check-Aktionen</strong> in einem einzigen Kurzbefehl: URL 1 (Doctolib) â†’ PrÃ¼fung â†’ URL 2 (Jameda) â†’ PrÃ¼fung â†’ URL 3 (116117) â†’ PrÃ¼fung</p></li>
+      <li class="step"><p>Verwende <strong>â€žWenn â€¦ Dann Benachrichtigung"</strong> pro Quelle mit unterschiedlichem Titel, z.B. <code>ðŸŸ¢ Doctolib frei</code> vs <code>ðŸ”µ Jameda frei</code></p></li>
+      <li class="step"><p>Richte <strong>eine einzige Automation</strong> ein, die alle 3 Checks nacheinander ausfÃ¼hrt â€“ so bekommst du eine Sammel-ÃœberprÃ¼fung pro Stunde</p></li>
+    </ol>
+    <div class="note">ðŸ’¡ Pro-Tipp: Setze die Automation auf mindestens 3Ã— tÃ¤glich (morgens, mittags, abends) â€“ kurz nach PraxisÃ¶ffnung, zur Mittagszeit und am frÃ¼hen Abend wenn Absagen hÃ¤ufig sind.</div>
+  </div>
+</div>
+```
+
   </div>
 
 </div>
 
 <!-- FOOTER -->
+
 <footer>
-  Keine Anmeldung · Keine Datenspeicherung · Nur für den persönlichen Gebrauch<br>
-  <a href="https://www.doctolib.de" target="_blank">doctolib.de</a> &nbsp;·&nbsp;
-  <a href="https://www.jameda.de" target="_blank">jameda.de</a> &nbsp;·&nbsp;
+  Keine Anmeldung Â· Keine Datenspeicherung Â· Nur fÃ¼r den persÃ¶nlichen Gebrauch<br>
+  <a href="https://www.doctolib.de" target="_blank">doctolib.de</a> &nbsp;Â·&nbsp;
+  <a href="https://www.jameda.de" target="_blank">jameda.de</a> &nbsp;Â·&nbsp;
   <a href="https://www.116117-termine.de" target="_blank">116117-termine.de</a>
 </footer>
 
 <script>
-// ── TABS ──
+// â”€â”€ TABS â”€â”€
 document.querySelectorAll('.tab-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
@@ -800,24 +854,24 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
   });
 });
 
-// ── TOGGLE INSTRUCTIONS ──
+// â”€â”€ TOGGLE INSTRUCTIONS â”€â”€
 function toggleInstr(btn) {
   btn.classList.toggle('open');
   const body = btn.nextElementSibling;
   body.classList.toggle('show');
 }
 
-// ── COPY URL ──
+// â”€â”€ COPY URL â”€â”€
 function copyUrl(id) {
   const text = document.getElementById(id).textContent;
   navigator.clipboard.writeText(text).then(() => {
     const el = document.querySelector(`#${id}`).parentElement.previousElementSibling;
-    el.textContent = '✓ Kopiert!';
-    setTimeout(() => el.textContent = '⎘ URL kopieren', 2000);
+    el.textContent = 'âœ“ Kopiert!';
+    setTimeout(() => el.textContent = 'âŽ˜ URL kopieren', 2000);
   });
 }
 
-// ── DOCTOLIB GENERATOR ──
+// â”€â”€ DOCTOLIB GENERATOR â”€â”€
 function generateDoctolib() {
   const fach  = document.getElementById('dl-fach').value;
   const stadt = document.getElementById('dl-stadt').value.trim() || 'Berlin';
@@ -841,25 +895,33 @@ function generateDoctolib() {
   document.getElementById('dl-output').classList.add('show');
 }
 
-// ── JAMEDA GENERATOR ──
+// â”€â”€ JAMEDA GENERATOR â”€â”€
 function generateJameda() {
-  const fach  = document.getElementById('jm-fach').value;
-  const stadt = document.getElementById('jm-stadt').value.trim() || 'Berlin';
-  const vers  = document.getElementById('jm-vers').value;
+  const fach   = document.getElementById('jm-fach').value;
+  const stadt  = document.getElementById('jm-stadt').value.trim() || 'Berlin';
+  const vers   = document.getElementById('jm-vers').value;
   const radius = document.getElementById('jm-radius').value;
-  const tage  = document.getElementById('jm-tage').value;
 
-  // Construct a Jameda search URL
-  let stadtSlug = stadt.toLowerCase().replace(/\s+/g, '-').replace(/ä/g,'ae').replace(/ö/g,'oe').replace(/ü/g,'ue').replace(/ß/g,'ss');
-  let versParam = vers ? `&versicherung=${vers}` : '';
-  let url = `https://www.jameda.de/${fach}/${stadtSlug}/`;
+  // Slug fuer Stadt bauen
+  const stadtSlug = stadt.toLowerCase()
+    .replace(/Ã¤/g,'ae').replace(/Ã¶/g,'oe').replace(/Ã¼/g,'ue').replace(/ÃŸ/g,'ss')
+    .replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+
+  // Jameda URL mit Filter: nur Aerzte MIT Online-Terminbuchung (online_appointment=1)
+  const params = new URLSearchParams();
+  params.set('online_appointment', '1');        // NUR Aerzte mit freiem Online-Termin
+  if (vers === 'gesetzlich') params.set('insurance_type', 'statutory');
+  if (vers === 'privat')     params.set('insurance_type', 'private');
+  if (radius)                params.set('radius', radius);
+
+  const url = `https://www.jameda.de/${fach}/${stadtSlug}/?${params.toString()}`;
 
   document.getElementById('jm-url').textContent = url;
   document.getElementById('jm-test-link').href = url;
   document.getElementById('jm-output').classList.add('show');
 }
 
-// ── 116117 GENERATOR ──
+// â”€â”€ 116117 GENERATOR â”€â”€
 function generate116117() {
   const fach  = document.getElementById('kv-fach').value;
   const plz   = document.getElementById('kv-plz').value.trim() || '10115';
@@ -871,6 +933,68 @@ function generate116117() {
   document.getElementById('kv-test-link').href = 'https://www.116117-termine.de/';
   document.getElementById('kv-output').classList.add('show');
 }
+
+// â”€â”€ AUTOCOMPLETE ENGINE â”€â”€
+const STAEDTE = [
+  'Aachen','Augsburg','Bamberg','Berlin','Bielefeld','Bochum','Bonn','Braunschweig',
+  'Bremen','Chemnitz','Darmstadt','Dortmund','Dresden','Duisburg','DÃ¼sseldorf',
+  'Erfurt','Erlangen','Essen','Frankfurt am Main','Freiburg im Breisgau',
+  'Gelsenkirchen','GÃ¶ttingen','Hagen','Halle (Saale)','Hamburg','Hamm','Hannover',
+  'Heidelberg','Herne','Ingolstadt','Jena','Karlsruhe','Kassel','Kiel','Koblenz',
+  'KÃ¶ln','Krefeld','Leipzig','Leverkusen','LÃ¼beck','Ludwigshafen','Magdeburg',
+  'Mainz','Mannheim','MÃ¶nchengladbach','MÃ¼lheim an der Ruhr','MÃ¼nchen','MÃ¼nster',
+  'NÃ¼rnberg','Oberhausen','Oldenburg','OsnabrÃ¼ck','Paderborn','Pforzheim','Potsdam',
+  'Regensburg','Rostock','SaarbrÃ¼cken','Solingen','Stuttgart','Trier','Ulm',
+  'Wiesbaden','Wolfsburg','Wuppertal','WÃ¼rzburg'
+];
+
+let acActive = {};
+
+function acFilter(inputId, listId) {
+  const input = document.getElementById(inputId);
+  const list  = document.getElementById(listId);
+  const val   = input.value.trim();
+  acActive[listId] = -1;
+  if (val.length < 2) { list.style.display = 'none'; return; }
+  const re = new RegExp(val.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'), 'i');
+  const hits = STAEDTE.filter(s => re.test(s)).slice(0, 8);
+  if (!hits.length) { list.style.display = 'none'; return; }
+  list.innerHTML = hits.map(s =>
+    `<li onclick="acSelect('${inputId}','${listId}',this)">${s.replace(re, m => '<mark>'+m+'</mark>')}</li>`
+  ).join('');
+  list.style.display = 'block';
+}
+
+function acSelect(inputId, listId, li) {
+  document.getElementById(inputId).value = li.textContent;
+  const list = document.getElementById(listId);
+  list.style.display = 'none';
+}
+
+function acKey(e, listId) {
+  const list = document.getElementById(listId);
+  const items = list.querySelectorAll('li');
+  if (!items.length) return;
+  if (e.key === 'ArrowDown') {
+    acActive[listId] = Math.min(acActive[listId]+1, items.length-1);
+  } else if (e.key === 'ArrowUp') {
+    acActive[listId] = Math.max(acActive[listId]-1, 0);
+  } else if (e.key === 'Enter' && acActive[listId] >= 0) {
+    items[acActive[listId]].click(); e.preventDefault(); return;
+  } else if (e.key === 'Escape') {
+    list.style.display = 'none'; return;
+  }
+  items.forEach((li,i) => li.classList.toggle('active', i === acActive[listId]));
+}
+
+// Click outside closes autocomplete
+document.addEventListener('click', e => {
+  document.querySelectorAll('.autocomplete-list').forEach(l => {
+    if (!l.previousElementSibling?.contains(e.target)) l.style.display = 'none';
+  });
+});
+
 </script>
+
 </body>
 </html>
